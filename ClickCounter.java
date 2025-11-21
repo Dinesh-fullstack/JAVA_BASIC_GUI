@@ -1,13 +1,16 @@
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
+import java.awt.event.*;
+import java.awt.font.*;
 
 public class ClickCounter extends Frame{
 
         static int count=0;
         ClickCounter(){
+            Label label = new Label("Click Counter");
+            label.setBounds(200, 50, 200, 210);
+            label.setFont(new Font("Serif", Font.BOLD, 24));
+            add(label);
+
             TextField display=new TextField(" "+count+" ");
             display.setBounds(200,300,100,30);
             Button increse=new Button("+");
